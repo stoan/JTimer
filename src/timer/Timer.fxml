@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="233.0" prefWidth="493.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="timer.TimerController">
+  <children>
+    <Label layoutX="14.0" layoutY="86.0" text="Timer" />
+    <Label layoutX="14.0" layoutY="129.0" prefWidth="91.0" text="Custom minutes" />
+    <TextField fx:id="txtcustomtime" layoutX="122.0" layoutY="123.0" prefWidth="-1.0">
+      <tooltip>
+        <Tooltip text="Please enter minutes in numeric format.  e.g. 55" />
+      </tooltip>
+    </TextField>
+    <Label layoutX="14.0" layoutY="190.0" text="Action" />
+    <GridPane id="GridPane" layoutX="294.0" layoutY="180.0">
+      <children>
+        <Button fx:id="btnstart" mnemonicParsing="false" onAction="#handleBtnStartAction" text="Start" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <Button fx:id="btnreset" mnemonicParsing="false" onAction="#handleBtnResetAction" text="Reset" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Button fx:id="btnabort" mnemonicParsing="false" onAction="#handleBtnAbortAction" text="Abort" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+        <Button fx:id="btnexit" mnemonicParsing="false" onAction="#handleBtnExitAction" text="Exit" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+    </GridPane>
+    <Label layoutX="146.0" layoutY="4.0" text="Stone Timer" textAlignment="CENTER" underline="false" wrapText="false">
+      <font>
+        <Font name="System Bold" size="30.0" />
+      </font>
+    </Label>
+    <!-- Actions ComboBox -->
+    <ComboBox fx:id="comboaction" layoutX="122.0" layoutY="180.0" prefHeight="21.0" prefWidth="145.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Shutdown" />
+          <String fx:value="Hibernate" />
+          <String fx:value="Lock" />
+          <String fx:value="Force Shutdown" />
+          <String fx:value="Restart" />
+          <String fx:value="Standby" />
+          <String fx:value="Logoff" />
+        </FXCollections>
+      </items>
+    </ComboBox>
+    <!-- Minutes ComboBox -->
+    <ComboBox fx:id="combotime" layoutX="122.0" layoutY="82.0" prefHeight="21.0" prefWidth="145.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="1 minute" />
+          <String fx:value="5 minutes" />
+          <String fx:value="15 minutes" />
+          <String fx:value="30 minutes" />
+          <String fx:value="45 minutes" />
+          <String fx:value="60 minutes" />
+          <String fx:value="90 minutes" />
+          <String fx:value="120 minutes" />
+          <String fx:value="150 minutes" />
+          <String fx:value="180 minutes" />
+        </FXCollections>
+      </items>
+    </ComboBox>
+    <AnchorPane layoutX="294.0" layoutY="82.0" minHeight="83.0" prefHeight="98.0" prefWidth="184.0">
+      <children>
+        <Label fx:id="timerLabel" layoutX="0.0" layoutY="0.0" prefHeight="75.0" prefWidth="184.0" style="-fx-font-size: 4em;" text="" textFill="RED" />
+        <ProgressBar fx:id="progressBar" disable="false" focusTraversable="false" layoutX="0.0" layoutY="75.0" minHeight="20.0" prefHeight="20.0" prefWidth="184.0" visible="true" />
+      </children>
+    </AnchorPane>
+    <Label fx:id="msgLabel" layoutX="79.0" layoutY="44.0" prefWidth="341.0" text="" textFill="RED">
+      <font>
+        <Font name="System Italic" size="16.0" />
+      </font>
+    </Label>
+    <ImageView fx:id="logo" fitHeight="68.25003007288794" fitWidth="91.00003814697266" layoutX="414.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+      
+    </ImageView>
+  </children>
+</AnchorPane>
