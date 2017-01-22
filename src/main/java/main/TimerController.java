@@ -6,9 +6,6 @@ package main;
 
 import com.housescent.timer.domain.TimerUtils;
 import com.housescent.timer.domain.Utils;
-
-import java.net.URL;
-import java.util.ResourceBundle;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
@@ -22,19 +19,22 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.util.Duration;
+
+import java.net.URL;
+import java.util.ResourceBundle;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.concurrent.TimeUnit;
-
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 
 /**
  *
  * @author Stoan
  */
 public class TimerController implements Initializable {
+
 
     @FXML
     private ComboBox<String> comboaction;
@@ -212,6 +212,6 @@ public class TimerController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         //Set Logo Image
-        logo.setImage(new Image(Utils.getIconURL()));
+        logo.setImage(new Image(getClass().getResourceAsStream(Utils.LOGO_PATH)));
     }
 }

@@ -4,10 +4,7 @@
  */
 package com.housescent.timer.domain;
 
-import java.io.File;
 import java.lang.reflect.InvocationTargetException;
-import java.net.MalformedURLException;
-import java.util.Date;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.logging.Level;
@@ -18,6 +15,8 @@ import java.util.logging.Logger;
  * @author Stoan
  */
 public class Utils {
+
+    public static final String LOGO_PATH = "/images/stopwatch.png";
 
     static Timer timer = null;
 
@@ -74,16 +73,5 @@ public class Utils {
             return false;
         }
         return true;
-    }
-
-    public static String getIconURL() {
-        File file = new File("src/main/resources/images/stopwatch.png");
-        String localUrl = null;
-        try {
-            localUrl = file.toURI().toURL().toString();
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        }
-        return localUrl;
     }
 }

@@ -30,7 +30,7 @@ public class Timer extends Application {
         stage.setScene(scene);
         stage.setResizable(false);
         //Set Logo icon
-        stage.getIcons().add(new Image(Utils.getIconURL()));
+        stage.getIcons().add(new Image(getClass().getResourceAsStream(Utils.LOGO_PATH)));
         stage.show();
     }
 
