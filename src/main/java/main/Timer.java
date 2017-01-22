@@ -22,6 +22,7 @@ public class Timer extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         stage.setTitle("JTimer v0.1");
+        stage.setAlwaysOnTop(true);
 
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/timer.fxml"));
 
