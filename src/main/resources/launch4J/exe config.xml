@@ -13,7 +13,7 @@
     <stayAlive>false</stayAlive>
     <restartOnCrash>false</restartOnCrash>
     <manifest></manifest>
-    <icon></icon>
+    <icon>C:\Users\ADMIN\IdeaProjects\JTimer\src\main\resources\images\timer_icon.ico</icon>
     <singleInstance>
         <mutexName>JTimer</mutexName>
         <windowTitle></windowTitle>
