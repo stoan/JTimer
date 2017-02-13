@@ -3,11 +3,11 @@ Java Power Management Utility
 
 Uses: 
 
-*Restart your computer a certain time
+* Restart your computer a certain time
 
-*If you need to play music to fall asleep then set a time to shutdown your computer onces you are asleep
+* If you need to play music to fall asleep then set a time to shutdown your computer onces you are asleep
 
-*And more other uses
+* And more other uses
 
 Experimenting with JavaFx and Java Reflection API.
 
