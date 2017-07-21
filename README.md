@@ -9,9 +9,9 @@ Uses:
 
 * And more other uses
 
-Experimenting with JavaFx and Java Reflection API.
+Created while learning JavaFx and Java Reflection API.
 
-Clone and build with Maven 3. A runnable jar will be created in the target directory $ mvn package
+Clone and build with Maven 3. A runnable jar will be created in the target directory when executing $ mvn package
 
 You can execute the runnable jar with $ java -jar JTimer.jar 
 
